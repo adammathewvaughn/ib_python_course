@@ -3,15 +3,19 @@
 
 
 
-def file_copier(file):
-    """
-    This function reads a file and writes the information into a new file.
-    """
+def read_file(file):
+    '''
+    Reads the file and returns the contents.
+    '''
+    file = open("random.txt", "r")
+    new_file= open("new_random.txt", "w")
+    file.read("random.txt")
+    for line in file:
+        print(next(line))
+    new_file.write("new_random.txt")
+    file.close(file)
+    file.close(new_file)
 
-    file_name = input(names.txt)
-    file_name_new = input(new_names.txt)
-    with open(file_name, "r") as file_to_copy:
-        with open(file_name_new, "w") as new_file:
-            for line in file_to_copy:
-                new_file.write(line)
-    return new_file(file)[:]
+    return new_contents
+
+print (read_file(new_file))
