@@ -10,9 +10,11 @@ def char_counter(file):
     """
 
     file = open("names.txt", 'r')
-    count = 0
-    for count in file:
-        count = count + 1
+    file = file.read()
+    for i in file:
+        count = 0
+        count += 1
+    file.close()
     return int(count)
 
 print (char_counter("names.txt"))
