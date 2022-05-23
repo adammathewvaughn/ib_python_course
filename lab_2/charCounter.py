@@ -1,16 +1,18 @@
-
-
-
 def char_counter(file):
     """
     This function loops through the given file and counts each character, returning the count as an integer.
 
     """
-    file = open("names.txt", 'r')
-    for i in file:
+    with open("names.txt", "r") as names:
+      with open("new_names.txt", "w") as new_names:
         count = 0
-        count ++ 1
-    file.close()
+        for line in names:
+          count += len(line)
+          len(line) + 1
+          new_names.write(line)
+
+    
     return int(count)
 
-print (char_counter("names.txt"))
+
+print(char_counter("names.txt"))
