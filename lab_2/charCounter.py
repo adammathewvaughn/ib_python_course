@@ -5,14 +5,12 @@ def char_counter(file):
     """
     with open("names.txt", "r") as names:
       with open("new_names.txt", "w") as new_names:
-        count = 0
         for line in names:
-          count += len(line)
-          len(line) + 1
-          new_names.write(line)
+            for c in line:
+                line =  c + line
+            new_names.write(line)
 
     
-    return int(count)
-
+    return (line)
 
 print(char_counter("names.txt"))
