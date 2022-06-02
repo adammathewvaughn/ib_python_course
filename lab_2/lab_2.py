@@ -11,7 +11,7 @@ def rw_random(file):
             for line in file:
                 new_file.write(line)
 
-    return(line)
+                return(line)
 
 
 print(rw_random("random.txt"))
@@ -30,7 +30,7 @@ def rw_names(file):
             for line in names:
                 for c in line:
                     line = c + line
-                new_names.write(line)
+                    new_names.write(line)
 
                 return(line)
 
